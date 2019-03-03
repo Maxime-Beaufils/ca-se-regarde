@@ -74,3 +74,8 @@ module.exports = {
     }
   }
 }
+export default {
+  router: {
+    base: '/docs/'
+  }
+}
