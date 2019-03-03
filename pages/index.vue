@@ -20,7 +20,7 @@
             </div>
             <div class="column description">
               <p style="font-weight: bold; color: #4a4a4a; font-size: 3vw; margin-bottom: 5px">{{movie[0].title}}</p>
-              <p>Rate: {{movie[0].vote_average}}<i class="fas fa-star" style="color: #FFFF66"></i></p>
+              <p>Rate: {{movie[0].vote_average}}<i class="fas fa-star" style="color: #e4e44d"></i></p>
               <p>Genre: {{genre["genres"].find(o => o.id == movie[0].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[0].genre_ids[1])["name"]}}</p>
               <p>Release: {{movie[0].release_date}}</p>
             </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="column description">
               <p style="font-weight: bold; font-size: 3vw; margin-bottom: 5px">{{movie[1].title}}</p>
-              <p>Rate: <i class="fas fa-star" style="color: #FFFF66"></i> {{movie[1].vote_average}}</p>
+              <p>Rate: <i class="fas fa-star" style="color: #e4e44d"></i> {{movie[1].vote_average}}</p>
               <p>Genre: {{genre["genres"].find(o => o.id == movie[1].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[1].genre_ids[1])["name"]}}</p>
               <p>Release: {{movie[1].release_date}}</p>
             </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="column description">
               <p style="font-weight: bold; font-size: 3vw; margin-bottom: 5px">{{movie[2].title}}</p>
-              <p>Rate: <i class="fas fa-star" style="color: #FFFF66"></i> {{movie[2].vote_average}}</p>
+              <p>Rate: <i class="fas fa-star" style="color: #e4e44d"></i> {{movie[2].vote_average}}</p>
               <p>Genre: {{genre["genres"].find(o => o.id == movie[2].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[2].genre_ids[1])["name"]}}</p>
               <p>Release: {{movie[2].release_date}}</p>
             </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="column description">
               <p style="font-weight: bold; font-size: 3vw; margin-bottom: 5px">{{movie[3].title}}</p>
-              <p>Rate: <i class="fas fa-star" style="color: #FFFF66"></i> {{movie[3].vote_average}}</p>
+              <p>Rate: <i class="fas fa-star" style="color: #e4e44d"></i> {{movie[3].vote_average}}</p>
               <p>Genre: {{genre["genres"].find(o => o.id == movie[3].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[3].genre_ids[1])["name"]}}</p>
               <p>Release: {{movie[3].release_date}}</p>
             </div>
@@ -85,8 +85,8 @@
             </div>
             <div class="column description">
               <p style="font-weight: bold; font-size: 3vw; margin-bottom: 5px">{{movie[4].title}}</p>
-              <p>Rate: <i class="fas fa-star" style="color: #FFFF66"></i> {{movie[4].vote_average}}, {{genre["genres"].find(o => o.id == movie[4].genre_ids[1])["name"]}}</p>
-              <p>Genre: {{genre["genres"].find(o => o.id == movie[4].genre_ids[0])["name"]}}</p>
+              <p>Rate: <i class="fas fa-star" style="color: #e4e44d"></i> {{movie[4].vote_average}}</p>
+              <p>Genre: {{genre["genres"].find(o => o.id == movie[4].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[4].genre_ids[1])["name"]}}</p>
               <p>Release: {{movie[4].release_date}}</p>
             </div>
           </div>
@@ -101,7 +101,7 @@
             </div>
             <div class="column description">
               <p style="font-weight: bold; font-size: 3vw; margin-bottom: 5px">{{movie[5].title}}</p>
-              <p>Rate: <i class="fas fa-star" style="color: #FFFF66"></i> {{movie[5].vote_average}}</p>
+              <p>Rate: <i class="fas fa-star" style="color: #e4e44d"></i> {{movie[5].vote_average}}</p>
               <p>Genre: {{genre["genres"].find(o => o.id == movie[5].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[5].genre_ids[1])["name"]}}</p>
               <p>Release: {{movie[5].release_date}}</p>
             </div>
@@ -169,7 +169,7 @@ export default {
     top: 75vh;
     left: 12.5vw;
     width: 80vw;
-    height: 18.5vh;
+    height: 16vh;
     animation: panXYZ 0.3s ease;
   }
   .column {
@@ -182,7 +182,8 @@ export default {
     justify-content: flex-start;
   }
   .description p{
-    font-size: 3vw;
+    font-size: 2.5vw;
+    font-family: code;
   }
   .column figure img{
     box-shadow: 5px 5px 10px rgba(10, 10, 10, 0.4);
