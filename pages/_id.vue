@@ -1,6 +1,7 @@
 <template>
   <div class="countainer">
     <p>{{movie[$route.params.id].title}}</p>
+    <img :src="url+movie[$route.params.id].backdrop_path">
   </div>
 </template>
 <script>

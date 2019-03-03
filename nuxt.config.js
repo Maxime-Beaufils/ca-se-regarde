@@ -46,6 +46,7 @@ module.exports = {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
+    'fullpage-nuxt',
   ],
   /*
   ** Axios module configuration
