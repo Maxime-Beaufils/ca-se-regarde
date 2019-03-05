@@ -38,7 +38,7 @@
       <div class="modal-background"></div>
       <div class="modal-content has-background-white">
         <i class="far fa-check-circle has-text-success is-size-3 validate"></i>
-        <p class="is-bold has-text-grey-dark has-text-centered is-size-5">Successfully add <br/>to your view list ! </p>
+        <p class="is-bold has-text-grey-dark has-text-centered is-size-6">Successfully add <br/>to your view list ! </p>
       </div>
       <button class="modal-close is-large" aria-label="close" v-on:click='isActive = !isActive'></button>
     </div>

@@ -55,7 +55,22 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
+  generate: {
+    routes: [
+      '/1',
+      '/2',
+      '/3',
+      '/4',
+      '/5',
+      '/6',
+      '/7',
+      '/8',
+      '/9'
+    ]
+  },
+  router: {
+    base: '/ca-se-regarde/'
+  },
   /*
   ** Build configuration
   */
