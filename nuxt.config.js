@@ -69,7 +69,7 @@ module.exports = {
     ]
   },
   router: {
-    base: '/ca-se-regarde/'
+    base: './'
   },
   /*
   ** Build configuration
