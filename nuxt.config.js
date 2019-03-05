@@ -29,6 +29,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    "~assets/main.css"
   ],
 
   /*
@@ -72,10 +73,5 @@ module.exports = {
     extend(config, ctx) {
       
     }
-  }
-}
-export default {
-  router: {
-    base: '/docs/'
   }
 }

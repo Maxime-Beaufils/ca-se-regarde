@@ -1,0 +1,45 @@
+.page-enter-active {
+  animation: acrossIn .40s ease both;
+} 
+.page-leave-active {
+  animation: acrossOut .40s ease both;
+} 
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0%, 0%);
+  }
+}
+@keyframes acrossOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.pageDown-enter-active {
+  animation: acrossInDown .40s ease-out both;
+} 
+.pageDown-leave-active {
+  animation: acrossOutDown .40s ease both;
+} 
+@keyframes acrossInDown {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0%, 0%);
+  }
+}
+@keyframes acrossOutDown {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
