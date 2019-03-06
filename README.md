@@ -4,9 +4,9 @@
 Conçu exclusivement pour une navigation mobile. Vous pouvez simuler la navigation mobile avec les outils de developement "toogle device toolbar". 
 WIP: https://maxime-beaufils.github.io/ca-se-regarde/
 
-[My App](maxime-beaufils.github.com/ca-se-regarde/img/img1.jpg)
-[My App](maxime-beaufils.github.com/ca-se-regarde/img/img2.jpg)
-[My App](maxime-beaufils.github.com/ca-se-regarde/img/img3.jpg)
+[My App](https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img1.png)
+[My App](https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img2.png)
+[My App](https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img3.png)
 ## Build Setup
 
 ``` bash
