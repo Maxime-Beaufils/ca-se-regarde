@@ -1,12 +1,16 @@
 # ca-se-regarde
 
 > test du framework Nuxt.js (vue.js)
-Conçu exclusivement pour une navigation mobile. Vous pouvez simuler la navigation mobile avec les outils de developement "toogle device toolbar". 
+Conçu exclusivement pour une navigation mobile. Vous pouvez simuler la navigation mobile avec les outils de developement "toogle device toolbar". <br/>
 WIP: https://maxime-beaufils.github.io/ca-se-regarde/
 
-![My App](https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img1.png)
-![My App](https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img2.png)
-![My App](https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img3.png)
+<p float="left">
+<img src="https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img1.png" width="270">
+<img src="https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img2.png" width="270">
+<img src="https://github.com/Maxime-Beaufils/ca-se-regarde/blob/master/img/img3.png" width="270">
+</p>
+
+
 ## Build Setup
 
 ``` bash
