@@ -1,6 +1,10 @@
 const pkg = require('./package')
 
-
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/ca-se-regarde/'
+  }
+} : {}
 module.exports = {
   mode: 'universal',
 
@@ -57,6 +61,7 @@ module.exports = {
   },
   generate: {
     routes: [
+      '/0',
       '/1',
       '/2',
       '/3',
@@ -64,13 +69,11 @@ module.exports = {
       '/5',
       '/6',
       '/7',
-      '/8',
-      '/9'
+      '/8'
     ]
   },
-  router: {
-    base: '/ca-se-regarde/'
-  },
+  
+  ...routerBase,
   /*
   ** Build configuration
   */
