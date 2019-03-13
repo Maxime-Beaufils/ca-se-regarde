@@ -2,6 +2,7 @@
 
 > test du framework Nuxt.js (vue.js)<br/>
 Cette app est conçu exclusivement pour une navigation mobile. Vous pouvez simuler la navigation mobile avec les outils de developement chrome ou firefox "toogle device toolbar". <br/>
+Les données proviennent de l'API TMDB (the movie database) appelées avec axios et stockées dans le store VueX. <br/>
 WIP: https://maxime-beaufils.github.io/ca-se-regarde/
 
 <p float="left">
