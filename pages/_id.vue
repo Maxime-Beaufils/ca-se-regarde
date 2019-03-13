@@ -19,7 +19,8 @@
     <article class="message is-info">
       <div class="message-body is-flex" style="justify-content: space-around; align-items: center">
         <i class="fas fa-info-circle has-text-info is-size-5"></i>
-        <p class="is-size-7"><b>Genre</b><br>{{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[0])["name"]}} - {{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[1])["name"]}}</p>
+        <p class="is-size-7" v-if="movie[$route.params.id].genre_ids[1]"><b>Genre: </b>{{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[1])["name"]}}</p>
+        <p class="is-size-7" v-else><b>Genre: </b>{{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[0])["name"]}}</p>
         <p class="is-size-7"><b>Release</b><br>{{movie[$route.params.id].release_date}}</p>
         <p class="is-size-7"><b>Duration</b><br>2h01</p>
       </div>
@@ -59,17 +60,20 @@ export default {
     },
     data() {
       return {
-        isActive: false
+        isActive: false,
+        movie : this.$store.state.movies, 
+        genre : this.$store.state.genres,
+        url : this.$store.state.url
       }
     },
-  async asyncData({ $axios }) { 
-    const movies = await $axios.$get('https://api.themoviedb.org/3/discover/movie?api_key=6826192083758777324271fcce50a01c&sort_by=popularity.desc&certification_country=FR&include_adult=false&include_video=false&page=1&release_date.gte=2010')
-    const genres = await $axios.$get('https://api.themoviedb.org/3/genre/movie/list?api_key=6826192083758777324271fcce50a01c&language=en-US');
-  return {
-          movie : movies.results,
-          genre : genres,
-          url : "http://image.tmdb.org/t/p/w500/"}
-  }
+  // async asyncData({ $axios }) { 
+  //   const movies = await $axios.$get('https://api.themoviedb.org/3/discover/movie?api_key=6826192083758777324271fcce50a01c&sort_by=popularity.desc&certification_country=FR&include_adult=false&include_video=false&page=1&release_date.gte=2010')
+  //   const genres = await $axios.$get('https://api.themoviedb.org/3/genre/movie/list?api_key=6826192083758777324271fcce50a01c&language=en-US');
+  // return {
+  //         movie : movies.results,
+  //         genre : genres,
+  //         url : "http://image.tmdb.org/t/p/w500/"}
+  // }
 }
 </script>
 

@@ -35,13 +35,10 @@ export default {
     moviePreview,
     navTop
   },
-  async asyncData({ $axios }) {
-    const movies = await $axios.$get('https://api.themoviedb.org/3/discover/movie?api_key=6826192083758777324271fcce50a01c&sort_by=popularity.desc&certification_country=FR&include_adult=false&include_video=false&page=1&release_date.gte=2010');
-    const genres = await $axios.$get('https://api.themoviedb.org/3/genre/movie/list?api_key=6826192083758777324271fcce50a01c&language=en-US');
-
+  data() {
     return {
-            movieData : movies.results,
-            genreData : genres,
+            movieData : this.$store.state.movies, 
+            genreData : this.$store.state.genres,
             }
   },
   
