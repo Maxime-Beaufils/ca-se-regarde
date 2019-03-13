@@ -1,13 +1,14 @@
 <template>
   <div id="wrap">
     <navTop />
-    <moviePreview :movie="movieData" :genre="genreData"/>
+    <moviePreview/>
   </div>
 </template>
 
 <script>
 import moviePreview from "@/components/moviePreview"
 import navTop from "@/components/navTop"
+import mapActions from 'vuex'
 export default {
   created () {
       if (process.browser) { 
@@ -34,12 +35,6 @@ export default {
   components: {
     moviePreview,
     navTop
-  },
-  data() {
-    return {
-            movieData : this.$store.state.movies, 
-            genreData : this.$store.state.genres,
-            }
   },
   
 }

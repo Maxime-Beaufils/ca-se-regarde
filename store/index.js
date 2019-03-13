@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import axios from 'axios'
+
 
 const createStore = () => {
   return new Vuex.Store({
@@ -15,13 +15,19 @@ const createStore = () => {
       setGenres(state, genreData) {
         state.genres = genreData
       },
+      shuffleMovie(state) {
+        state.movies = state.movies.sort( () => Math.random() - 0.5)
+      }
     },
     actions: {
       async nuxtServerInit ({ commit }, { $axios }) {
-        const movieData = await $axios.$get('https://api.themoviedb.org/3/discover/movie?api_key=6826192083758777324271fcce50a01c&sort_by=popularity.desc&certification_country=FR&include_adult=false&include_video=false&page=1&release_date.gte=2010');
+        const movieData = await $axios.$get('https://api.themoviedb.org/3/discover/movie?api_key=6826192083758777324271fcce50a01c&?sort_by=popularity.desc&page='+Math.floor(Math.random() * 10) + 1  );
         const genreData = await $axios.$get('https://api.themoviedb.org/3/genre/movie/list?api_key=6826192083758777324271fcce50a01c&language=en-US');
         commit('setMovies', movieData)
         commit('setGenres', genreData)
+      },
+      shuffleMovie({commit}){
+        commit('shuffleMovie')
       }
     },
     getters: {

@@ -14,6 +14,7 @@
                   <p style="font-weight: bold; color: #4a4a4a; font-size: 3vw; margin-bottom: 5px">{{movie[i].title}}</p>
                   <p><b>Rate: </b>{{movie[i].vote_average}} /10 <i class="fab fa-imdb"  style="color: #f5c518; font-size:3vw"></i></p>
                   <p v-if="movie[i].genre_ids[1]"><b>Genre: </b>{{genre["genres"].find(o => o.id == movie[i].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[i].genre_ids[1])["name"]}}</p>
+                  <p v-else-if="movie[i].genre_ids[1] && movie[i].genre_ids[0]"><b>Genre: </b>{{genre["genres"].find(o => o.id == movie[i].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[i].genre_ids[1])["name"]}}</p>
                   <p v-else><b>Genre: </b>{{genre["genres"].find(o => o.id == movie[i].genre_ids[0])["name"]}}</p>
                   <p><b>Release: </b>{{movie[i].release_date}}</p>
                 </div>
@@ -31,19 +32,21 @@
 export default {
   components: {
     },
-    props: {
-      movie: {
-        type: Array,
-        default: false
-      },
-      genre: {
-        type: Object,
-        default: false
-      }
-    },
+    // props: {
+    //   movie: {
+    //     type: Array,
+    //     default: false
+    //   },
+    //   genre: {
+    //     type: Object,
+    //     default: false
+    //   }
+    // },
     data(){
       return{ 
         url : this.$store.state.url,
+        movie : this.$store.state.movies, 
+        genre : this.$store.state.genres,
             numberMoviePreview: [0,1,2,3,4,5,6,7,8],
             opts: {
               start: 0,
