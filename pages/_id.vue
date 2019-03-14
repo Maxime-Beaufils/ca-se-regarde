@@ -19,8 +19,9 @@
     <article class="message is-info">
       <div class="message-body is-flex" style="justify-content: space-around; align-items: center">
         <i class="fas fa-info-circle has-text-info is-size-5"></i>
-        <p class="is-size-7" v-if="movie[$route.params.id].genre_ids[1]"><b>Genre: </b>{{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[1])["name"]}}</p>
-        <p class="is-size-7" v-else><b>Genre: </b>{{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[0])["name"]}}</p>
+        <p class="is-size-7" v-if="movie[$route.params.id].genre_ids[1] && movie[$route.params.id].genre_ids[0]"><b>Genre: </b><br>{{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[0])["name"]}}, {{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[1])["name"]}}</p>
+        <p class="is-size-7" v-else-if="movie[$route.params.id].genre_ids[0]"><b>Genre: </b><br>{{genre["genres"].find(o => o.id == movie[$route.params.id].genre_ids[0])["name"]}}</p>
+        <p class="is-size-7" v-else><b>Genre: </b></p>
         <p class="is-size-7"><b>Release</b><br>{{movie[$route.params.id].release_date}}</p>
         <p class="is-size-7"><b>Duration</b><br>2h01</p>
       </div>
