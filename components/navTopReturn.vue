@@ -1,8 +1,8 @@
 <template>
   <nav class="nav is-flex">
-      <nuxt-link to="/">
-        <i class="fas fa-arrow-circle-left"></i>
-      </nuxt-link>
+      <!-- <nuxt-link to="/"> -->
+        <i class="fas fa-arrow-circle-left" @click="$router.back()"></i>
+      <!-- </nuxt-link> -->
     </nav>
 </template>
 
